@@ -1,99 +1,208 @@
 <html>
-	<head>	
-			<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+</head>
+<title> slimbillgates </title>
+<link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
+<style>
+body {
+  // background-image: url("bg.png") ;
+   background-color: blue;
+	 background-size: 1000px 1500px;
+}
+#content {
 
-			<title>:o</title>
-			
-
-			
-		<script>
-document.onreadystatechange = function () {
-  var state = document.readyState
-  if (state == 'interactive') {
-       document.getElementById('container').style.visibility="hidden";
-  } else if (state == 'complete') {
-      setTimeout(function(){
-         document.getElementById('interactive');
-         document.getElementById('load').style.visibility="hidden";
-         document.getElementById('container').style.visibility="visible";
-      },4000);
-  }
-  }
-		</script>
-			
-	</head>
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
 	
-	<body>
-	 <div id="load"></div>
-	<div id="container">
-<iframe width="1" height="1" src="https://www.youtube.com/embed/HmZm8vNHBSU?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	<canvas id="memecanvas">
-		Sorry, canvas not supported
-		</canvas>
+	
 
-		<img id="start-image" src="youWouldnt.png" alt="why no work" />
-       
-		<input type='text' style="  width: 400; height:30; margin-left:auto; margin-right:auto;" value='you wouldnt steal a car' id='bottom-text'autofocus="autofocus"  />
-		</div>
-		<script>
-			
+}
 
-			var canvas = document.getElementById('memecanvas');
-			ctx = canvas.getContext('2d');
-			    
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 23%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: white; /* Black fallback color */
+    background-color: rgba(255,255,255, 0.8); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+	font-size:18px;
+ font-family: 'Tajawal'
+}
 
+.overlay2 {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 23%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    right:0;
+    top: 0;
+    background-color: white; /* Black fallback color */
+    background-color: rgba(255,255,255, 0.8); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+	font-size:18px;
+ font-family: Arial;
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 1%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
  
+}
 
-			width = 1000;
-			height = 490;
+.menu:hover{
+cursor: pointer; 
 
-			canvas.width = width;
-			canvas.height = height;
+}
+
+.menu {
+ min-width: 60px;
+    min-height: 60px;
+    
+    display: inline-block;
+}
+
+.topcorner{
+   position:absolute;
+   top:0;
+   right:0;
+   min-width: 60px;
+    min-height: 60px;
+    padding: 7	px;
+    display: inline-block;
+  }
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 50px;
+	
+    color: #818181;
+    display: block; /* Display block instead of inline */\
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 45px;
+    font-size: 20px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 50px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+}
 
 
-			var img = document.getElementById('start-image');
-		   
-			var bottomText = document.getElementById('bottom-text');
-		
+</style>
 
-			
-			// When the image has loaded...
-			
-			drawMeme();
-			
 
-			
+<script>
+/* Open when someone clicks on the span element */
+function openNav() {
+    document.getElementById("myNav").style.width = "23%";
+}
 
-  bottomText.addEventListener('keydown', drawMeme)
-  bottomText.addEventListener('keyup', drawMeme)
-  bottomText.addEventListener('change', drawMeme)
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+</script>
 
-  function drawMeme() {
-    ctx.clearRect(0, 0, width, height);
+</head>
 
-    ctx.drawImage(img, 0, 0, width, height);
 
-    ctx.lineWidth  = 4;
-    ctx.font = '40pt xband_roughregular';
-    ctx.strokeStyle = 'black';
-    ctx.fillStyle = 'white';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'top';
+	
+<body>
+<div id="content">
+
+<br>
+
+ </div>
+
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+
+LOVEABLE
+<a href="https://slimbillgates.bandcamp.com/album/loveable"><img src="https://f4.bcbits.com/img/a3111992671_16.jpg"width ="200px"/></a>
+COMING SOON!!!!!!!!<BR><br>
+windings
+<a href=" https://slimbillgates.bandcamp.com/album/windings"/> <img src="https://f4.bcbits.com/img/a2324815909_16.jpg" width ="200px"/></a>
+RELEASED: JULY 2018<br><br>
+maroon fantasy
+<a href=" https://slimbillgates.bandcamp.com/album/maroon-fantasy"/> <img src="https://f4.bcbits.com/img/a2080767204_16.jpg" width ="200px"/></a>
+RELEASED: MAR 2018<br><br>
+the docklands <br>
+<a href=" https://slimbillgates.bandcamp.com/album/the-docklands"/> <img src="https://f4.bcbits.com/img/a2627456003_16.jpg" width ="200px"/></a>
+RELEASED: JULY 2016<br><br>
+highly anticipated concept album <br>
+<a href=" https://slimbillgates.bandcamp.com/album/highly-anticipated-concept-album"/> <img src="https://f4.bcbits.com/img/a3509890774_16.jpg" width ="200px"/></a>
+RELEASED: FEB 2016
+<br>
+<br>
 
    
-    ctx.textBaseline = 'middle';
-    var text2 = document.getElementById('bottom-text').value;
-    text = text2.toUpperCase();
-      x = canvas.width/2;
-    y = canvas.height - canvas.height/2;
-    ctx.strokeText(text, x, y);
-    ctx.fillText(text, x, y);
-  }
+  </div>
 
-  
+</div>
+
+<div class="menu">
+<!-- Use any element to open/show the overlay navigation menu -->
+<span onclick="openNav()"></span> <br>
+</div>
 
 
-		</script>
-	</body>
-	
+
+</body>
+
 </html>

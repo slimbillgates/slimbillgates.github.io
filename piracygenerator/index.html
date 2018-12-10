@@ -1,0 +1,99 @@
+<html>
+	<head>	
+			<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+
+			<title>:o</title>
+			
+
+			
+		<script>
+document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('container').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.getElementById('container').style.visibility="visible";
+      },4000);
+  }
+  }
+		</script>
+			
+	</head>
+	
+	<body>
+	 <div id="load"></div>
+	<div id="container">
+<iframe width="1" height="1" src="https://www.youtube.com/embed/HmZm8vNHBSU?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	<canvas id="memecanvas">
+		Sorry, canvas not supported
+		</canvas>
+
+		<img id="start-image" src="youWouldnt.png" alt="why no work" />
+       
+		<input type='text' style="  width: 400; height:30; margin-left:auto; margin-right:auto;" value='you wouldnt steal a car' id='bottom-text'autofocus="autofocus"  />
+		</div>
+		<script>
+			
+
+			var canvas = document.getElementById('memecanvas');
+			ctx = canvas.getContext('2d');
+			    
+
+ 
+
+			width = 1000;
+			height = 490;
+
+			canvas.width = width;
+			canvas.height = height;
+
+
+			var img = document.getElementById('start-image');
+		   
+			var bottomText = document.getElementById('bottom-text');
+		
+
+			
+			// When the image has loaded...
+			
+			drawMeme();
+			
+
+			
+
+  bottomText.addEventListener('keydown', drawMeme)
+  bottomText.addEventListener('keyup', drawMeme)
+  bottomText.addEventListener('change', drawMeme)
+
+  function drawMeme() {
+    ctx.clearRect(0, 0, width, height);
+
+    ctx.drawImage(img, 0, 0, width, height);
+
+    ctx.lineWidth  = 4;
+    ctx.font = '40pt xband_roughregular';
+    ctx.strokeStyle = 'black';
+    ctx.fillStyle = 'white';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'top';
+
+   
+    ctx.textBaseline = 'middle';
+    var text2 = document.getElementById('bottom-text').value;
+    text = text2.toUpperCase();
+      x = canvas.width/2;
+    y = canvas.height - canvas.height/2;
+    ctx.strokeText(text, x, y);
+    ctx.fillText(text, x, y);
+  }
+
+  
+
+
+		</script>
+	</body>
+	
+</html>
