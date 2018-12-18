@@ -3,6 +3,7 @@
  #container {
             width: 75%;
             margin-left: auto;
+		background-color: blue;
             margin-right: auto;
 			font-family:'fxband_roughregular';
  }	
@@ -21,7 +22,8 @@ img {
     height:100%;
     position:fixed;
     z-index:9999;
-    background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center white;
+	background-color: blue;
+    background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center blue;
 }
 
 @font-face {
