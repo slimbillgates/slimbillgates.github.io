@@ -24,7 +24,7 @@ img {
     z-index:9999;
 	font-family:'fxband_roughregular'
 	background-color: black;
-    background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center blue;
+    background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center red;
 }
 
 @font-face {
