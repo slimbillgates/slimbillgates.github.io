@@ -22,7 +22,8 @@ img {
     height:100%;
     position:fixed;
     z-index:9999;
-	background-color: blue;
+	font-family:'fxband_roughregular'
+	background-color: black;
     background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center blue;
 }
 
