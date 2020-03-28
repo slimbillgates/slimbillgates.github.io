@@ -1,0 +1,317 @@
+<html>
+	<head>
+		<title> Grey's Anatomy Episode Generator </title>
+		<script>
+			//array of links
+			var randomlinks=new Array()
+
+			//season 1 (9 episode)
+			randomlinks[0]="https://play.stan.com.au/programs/2369321/play"
+			randomlinks[1]="https://play.stan.com.au/programs/2369322/play"
+			randomlinks[2]="https://play.stan.com.au/programs/2369323/play"
+			randomlinks[3]="https://play.stan.com.au/programs/2369324/play"
+			randomlinks[4]="https://play.stan.com.au/programs/2369325/play"
+			randomlinks[5]="https://play.stan.com.au/programs/2369326/play"
+			randomlinks[6]="https://play.stan.com.au/programs/2369327/play"
+			randomlinks[7]="https://play.stan.com.au/programs/2369328/play"
+			randomlinks[8]="https://play.stan.com.au/programs/2369329/play"
+
+			//season 2 (27 episodes)
+			randomlinks[9]="https://play.stan.com.au/programs/2369330/play" //ep 1
+			randomlinks[10]="https://play.stan.com.au/programs/2369331/play" //ep 2
+			randomlinks[11]="https://play.stan.com.au/programs/2369332/play" //ep 3
+			randomlinks[12]="https://play.stan.com.au/programs/2369333/play" //ep 4
+			randomlinks[13]="https://play.stan.com.au/programs/2369334/play" //ep 5
+			randomlinks[14]="https://play.stan.com.au/programs/2369335/play" //ep 6
+			randomlinks[15]="https://play.stan.com.au/programs/2369336/play" //ep 7
+			randomlinks[16]="https://play.stan.com.au/programs/2369337/play" //ep 8
+			randomlinks[17]="https://play.stan.com.au/programs/2369338/play" //ep 9
+			randomlinks[18]="https://play.stan.com.au/programs/2369339/play" //ep 10
+			randomlinks[19]="https://play.stan.com.au/programs/2369340/play" //ep 11
+			randomlinks[20]="https://play.stan.com.au/programs/2369341/play" //ep 12
+			randomlinks[21]="https://play.stan.com.au/programs/2369342/play" //ep 13
+			randomlinks[22]="https://play.stan.com.au/programs/2369343/play" //ep 14
+			randomlinks[23]="https://play.stan.com.au/programs/2369344/play" //ep 15
+			randomlinks[24]="https://play.stan.com.au/programs/2369345/play" //ep 16
+			randomlinks[25]="https://play.stan.com.au/programs/2369346/play" //ep 17
+			randomlinks[26]="https://play.stan.com.au/programs/2369347/play" //ep 18
+			randomlinks[27]="https://play.stan.com.au/programs/2369348/play" //ep 19
+			randomlinks[28]="https://play.stan.com.au/programs/2369349/play" //ep 20
+			randomlinks[29]="https://play.stan.com.au/programs/2369350/play" //ep 21
+			randomlinks[30]="https://play.stan.com.au/programs/2369351/play" //ep 22
+			randomlinks[31]="https://play.stan.com.au/programs/2369352/play" //ep 23
+			randomlinks[32]="https://play.stan.com.au/programs/2369353/play" //ep 24
+			randomlinks[33]="https://play.stan.com.au/programs/2369354/play" //ep 25
+			randomlinks[34]="https://play.stan.com.au/programs/2369355/play" //ep 26
+			randomlinks[35]="https://play.stan.com.au/programs/2369356/play" //ep 27
+
+			//season 3 (25 episodes)
+			randomlinks[36]="https://play.stan.com.au/programs/2369357/play" //ep 1
+			randomlinks[37]="https://play.stan.com.au/programs/2369358/play" //ep 2
+			randomlinks[38]="https://play.stan.com.au/programs/2369359/play" //ep 3
+			randomlinks[39]="https://play.stan.com.au/programs/2369360/play" //ep 4
+			randomlinks[40]="https://play.stan.com.au/programs/2369361/play" //ep 5
+			randomlinks[41]="https://play.stan.com.au/programs/2369362/play" //ep 6
+			randomlinks[42]="https://play.stan.com.au/programs/2369363/play" //ep 7
+			randomlinks[43]="https://play.stan.com.au/programs/2369364/play" //ep 8
+			randomlinks[44]="https://play.stan.com.au/programs/2369365/play" //ep 9
+			randomlinks[45]="https://play.stan.com.au/programs/2369366/play" //ep 10
+			randomlinks[46]="https://play.stan.com.au/programs/2369367/play" //ep 11
+			randomlinks[47]="https://play.stan.com.au/programs/2369368/play" //ep 12
+			randomlinks[48]="https://play.stan.com.au/programs/2369369/play" //ep 13
+			randomlinks[49]="https://play.stan.com.au/programs/2369370/play" //ep 14
+			randomlinks[50]="https://play.stan.com.au/programs/2369371/play" //ep 15
+			randomlinks[51]="https://play.stan.com.au/programs/2369372/play" //ep 16
+			randomlinks[52]="https://play.stan.com.au/programs/2369373/play" //ep 17
+			randomlinks[53]="https://play.stan.com.au/programs/2369374/play" //ep 18
+			randomlinks[54]="https://play.stan.com.au/programs/2369375/play" //ep 19
+			randomlinks[55]="https://play.stan.com.au/programs/2369376/play" //ep 20
+			randomlinks[56]="https://play.stan.com.au/programs/2369377/play" //ep 21
+			randomlinks[57]="https://play.stan.com.au/programs/2369378/play" //ep 22
+			randomlinks[58]="https://play.stan.com.au/programs/2369379/play" //ep 23
+			randomlinks[59]="https://play.stan.com.au/programs/2369380/play" //ep 24
+			randomlinks[60]="https://play.stan.com.au/programs/2369381/play" //ep 25
+
+			//season 4 (17 episodes)
+			randomlinks[61]="https://play.stan.com.au/programs/2369382/play" //ep 1
+			randomlinks[62]="https://play.stan.com.au/programs/2369383/play" //ep 2
+			randomlinks[63]="https://play.stan.com.au/programs/2369384/play" //ep 3
+			randomlinks[64]="https://play.stan.com.au/programs/2369385/play" //ep 4
+			randomlinks[65]="https://play.stan.com.au/programs/2369386/play" //ep 5
+			randomlinks[66]="https://play.stan.com.au/programs/2369387/play" //ep 6
+			randomlinks[67]="https://play.stan.com.au/programs/2369388/play" //ep 7
+			randomlinks[68]="https://play.stan.com.au/programs/2369389/play" //ep 8
+			randomlinks[69]="https://play.stan.com.au/programs/2369390/play" //ep 9
+			randomlinks[70]="https://play.stan.com.au/programs/2369391/play" //ep 10
+			randomlinks[71]="https://play.stan.com.au/programs/2369392/play" //ep 11
+			randomlinks[72]="https://play.stan.com.au/programs/2369393/play" //ep 12
+			randomlinks[73]="https://play.stan.com.au/programs/2369394/play" //ep 13
+			randomlinks[74]="https://play.stan.com.au/programs/2369395/play" //ep 14
+			randomlinks[75]="https://play.stan.com.au/programs/2369396/play" //ep 15
+			randomlinks[76]="https://play.stan.com.au/programs/2369397/play" //ep 16
+			randomlinks[77]="https://play.stan.com.au/programs/2369398/play" //ep 17
+
+			//season 5 (24 episodes)
+			randomlinks[78]="https://play.stan.com.au/programs/2369399/play" //ep 1
+			randomlinks[79]="https://play.stan.com.au/programs/2369400/play" //ep 2
+			randomlinks[80]="https://play.stan.com.au/programs/2369401/play" //ep 3
+			randomlinks[81]="https://play.stan.com.au/programs/2369402/play" //ep 4
+			randomlinks[82]="https://play.stan.com.au/programs/2369403/play" //ep 5
+			randomlinks[83]="https://play.stan.com.au/programs/2369404/play" //ep 6
+			randomlinks[84]="https://play.stan.com.au/programs/2369405/play" //ep 7
+			randomlinks[85]="https://play.stan.com.au/programs/2369406/play" //ep 8
+			randomlinks[86]="https://play.stan.com.au/programs/2369407/play" //ep 9
+			randomlinks[87]="https://play.stan.com.au/programs/2369408/play" //ep 10
+			randomlinks[88]="https://play.stan.com.au/programs/2369409/play" //ep 11
+			randomlinks[89]="https://play.stan.com.au/programs/2369410/play" //ep 12
+			randomlinks[90]="https://play.stan.com.au/programs/2369411/play" //ep 13
+			randomlinks[91]="https://play.stan.com.au/programs/2369412/play" //ep 14
+			randomlinks[92]="https://play.stan.com.au/programs/2369413/play" //ep 15
+			randomlinks[93]="https://play.stan.com.au/programs/2369414/play" //ep 16
+			randomlinks[94]="https://play.stan.com.au/programs/2369415/play" //ep 17
+			randomlinks[95]="https://play.stan.com.au/programs/2369416/play" //ep 18
+			randomlinks[96]="https://play.stan.com.au/programs/2369417/play" //ep 19
+			randomlinks[97]="https://play.stan.com.au/programs/2369418/play" //ep 20
+			randomlinks[98]="https://play.stan.com.au/programs/2369419/play" //ep 21
+			randomlinks[99]="https://play.stan.com.au/programs/2369420/play" //ep 22
+			randomlinks[100]="https://play.stan.com.au/programs/2369421/play" //ep 23
+			randomlinks[101]="https://play.stan.com.au/programs/2369422/play" //ep 24
+
+			//season 6 (24 episodes)
+			randomlinks[101]="https://play.stan.com.au/programs/2369423/play" //ep 1
+			randomlinks[102]="https://play.stan.com.au/programs/2369424/play" //ep 2
+			randomlinks[103]="https://play.stan.com.au/programs/2369425/play" //ep 3
+			randomlinks[104]="https://play.stan.com.au/programs/2369426/play" //ep 4
+			randomlinks[105]="https://play.stan.com.au/programs/2369427/play" //ep 5
+			randomlinks[106]="https://play.stan.com.au/programs/2369428/play" //ep 6
+			randomlinks[107]="https://play.stan.com.au/programs/2369429/play" //ep 7
+			randomlinks[108]="https://play.stan.com.au/programs/2369430/play" //ep 8
+			randomlinks[109]="https://play.stan.com.au/programs/2369431/play" //ep 9
+			randomlinks[110]="https://play.stan.com.au/programs/2369432/play" //ep 10
+			randomlinks[111]="https://play.stan.com.au/programs/2369433/play" //ep 11
+			randomlinks[112]="https://play.stan.com.au/programs/2369434/play" //ep 12
+			randomlinks[113]="https://play.stan.com.au/programs/2369435/play" //ep 13
+			randomlinks[114]="https://play.stan.com.au/programs/2369436/play" //ep 14
+			randomlinks[115]="https://play.stan.com.au/programs/2369437/play" //ep 15
+			randomlinks[116]="https://play.stan.com.au/programs/2369438/play" //ep 16
+			randomlinks[117]="https://play.stan.com.au/programs/2369439/play" //ep 17
+			randomlinks[118]="https://play.stan.com.au/programs/2369440/play" //ep 18
+			randomlinks[119]="https://play.stan.com.au/programs/2369441/play" //ep 19
+			randomlinks[120]="https://play.stan.com.au/programs/2369442/play" //ep 20
+			randomlinks[121]="https://play.stan.com.au/programs/2369443/play" //ep 21
+			randomlinks[122]="https://play.stan.com.au/programs/2369444/play" //ep 22
+			randomlinks[123]="https://play.stan.com.au/programs/2369445/play" //ep 23
+			randomlinks[124]="https://play.stan.com.au/programs/2369446/play" //ep 24
+
+			//season 7 (22 episodes)
+			randomlinks[135]="https://play.stan.com.au/programs/2369427/play" //ep 1
+			randomlinks[136]="https://play.stan.com.au/programs/2369428/play" //ep 2
+			randomlinks[137]="https://play.stan.com.au/programs/2369429/play" //ep 3
+			randomlinks[138]="https://play.stan.com.au/programs/2369430/play" //ep 4
+			randomlinks[139]="https://play.stan.com.au/programs/2369431/play" //ep 5
+			randomlinks[140]="https://play.stan.com.au/programs/2369432/play" //ep 6
+			randomlinks[141]="https://play.stan.com.au/programs/2369433/play" //ep 7
+			randomlinks[142]="https://play.stan.com.au/programs/2369434/play" //ep 8
+			randomlinks[143]="https://play.stan.com.au/programs/2369435/play" //ep 9
+			randomlinks[144]="https://play.stan.com.au/programs/2369436/play" //ep 10
+			randomlinks[145]="https://play.stan.com.au/programs/2369437/play" //ep 11
+			randomlinks[146]="https://play.stan.com.au/programs/2369438/play" //ep 12
+			randomlinks[147]="https://play.stan.com.au/programs/2369439/play" //ep 13
+			randomlinks[148]="https://play.stan.com.au/programs/2369440/play" //ep 14
+			randomlinks[149]="https://play.stan.com.au/programs/2369441/play" //ep 15
+			randomlinks[150]="https://play.stan.com.au/programs/2369442/play" //ep 16
+			randomlinks[151]="https://play.stan.com.au/programs/2369443/play" //ep 17
+			randomlinks[152]="https://play.stan.com.au/programs/2369444/play" //ep 18
+			randomlinks[153]="https://play.stan.com.au/programs/2369445/play" //ep 19
+			randomlinks[154]="https://play.stan.com.au/programs/2369446/play" //ep 20
+			randomlinks[155]="https://play.stan.com.au/programs/2369447/play" //ep 21
+			randomlinks[156]="https://play.stan.com.au/programs/2369448/play" //ep 22
+
+			//season 8 (24 episodes)
+			randomlinks[157]="https://play.stan.com.au/programs/2369449/play" //ep 1
+			randomlinks[158]="https://play.stan.com.au/programs/2369450/play" //ep 2
+			randomlinks[159]="https://play.stan.com.au/programs/2369451/play" //ep 3
+			randomlinks[160]="https://play.stan.com.au/programs/2369452/play" //ep 4
+			randomlinks[161]="https://play.stan.com.au/programs/2369453/play" //ep 5
+			randomlinks[162]="https://play.stan.com.au/programs/2369454/play" //ep 6
+			randomlinks[163]="https://play.stan.com.au/programs/2369455/play" //ep 7
+			randomlinks[164]="https://play.stan.com.au/programs/2369456/play" //ep 8
+			randomlinks[165]="https://play.stan.com.au/programs/2369457/play" //ep 9
+			randomlinks[166]="https://play.stan.com.au/programs/2369458/play" //ep 10
+			randomlinks[167]="https://play.stan.com.au/programs/2369459/play" //ep 11
+			randomlinks[168]="https://play.stan.com.au/programs/2369460/play" //ep 12
+			randomlinks[169]="https://play.stan.com.au/programs/2369461/play" //ep 13
+			randomlinks[170]="https://play.stan.com.au/programs/2369462/play" //ep 14
+			randomlinks[171]="https://play.stan.com.au/programs/2369463/play" //ep 15
+			randomlinks[172]="https://play.stan.com.au/programs/2369464/play" //ep 16
+			randomlinks[173]="https://play.stan.com.au/programs/2369465/play" //ep 17
+			randomlinks[174]="https://play.stan.com.au/programs/2369466/play" //ep 18
+			randomlinks[175]="https://play.stan.com.au/programs/2369467/play" //ep 19
+			randomlinks[176]="https://play.stan.com.au/programs/2369468/play" //ep 20
+			randomlinks[177]="https://play.stan.com.au/programs/2369469/play" //ep 21
+			randomlinks[178]="https://play.stan.com.au/programs/2369470/play" //ep 22
+			randomlinks[179]="https://play.stan.com.au/programs/2369471/play" //ep 23
+			randomlinks[180]="https://play.stan.com.au/programs/2369472/play" //ep 24
+
+
+			//season 9 (24 episodes)
+			randomlinks[181]="https://play.stan.com.au/programs/2369473/play" //ep 1
+			randomlinks[182]="https://play.stan.com.au/programs/2369474/play" //ep 2
+			randomlinks[183]="https://play.stan.com.au/programs/2369475/play" //ep 3
+			randomlinks[184]="https://play.stan.com.au/programs/2369476/play" //ep 4
+			randomlinks[185]="https://play.stan.com.au/programs/2369477/play" //ep 5
+			randomlinks[186]="https://play.stan.com.au/programs/2369478/play" //ep 6
+			randomlinks[187]="https://play.stan.com.au/programs/2369479/play" //ep 7
+			randomlinks[188]="https://play.stan.com.au/programs/2369480/play" //ep 8
+			randomlinks[189]="https://play.stan.com.au/programs/2369481/play" //ep 9
+			randomlinks[190]="https://play.stan.com.au/programs/2369482/play" //ep 10
+			randomlinks[191]="https://play.stan.com.au/programs/2369483/play" //ep 11
+			randomlinks[192]="https://play.stan.com.au/programs/2369484/play" //ep 12
+			randomlinks[193]="https://play.stan.com.au/programs/2369485/play" //ep 13
+			randomlinks[194]="https://play.stan.com.au/programs/2369486/play" //ep 14
+			randomlinks[195]="https://play.stan.com.au/programs/2369487/play" //ep 15
+			randomlinks[196]="https://play.stan.com.au/programs/2369488/play" //ep 16
+			randomlinks[197]="https://play.stan.com.au/programs/2369489/play" //ep 17
+			randomlinks[198]="https://play.stan.com.au/programs/2369490/play" //ep 18
+			randomlinks[199]="https://play.stan.com.au/programs/2369491/play" //ep 19
+			randomlinks[200]="https://play.stan.com.au/programs/2369492/play" //ep 20
+			randomlinks[201]="https://play.stan.com.au/programs/2369493/play" //ep 21
+			randomlinks[202]="https://play.stan.com.au/programs/2369494/play" //ep 22
+			randomlinks[203]="https://play.stan.com.au/programs/2369495/play" //ep 23
+			randomlinks[204]="https://play.stan.com.au/programs/2369496/play" //ep 24
+
+			//season 10 (24 episoes)
+			randomlinks[205]="https://play.stan.com.au/programs/2369497/play" //ep 1
+			randomlinks[206]="https://play.stan.com.au/programs/2369498/play" //ep 2
+			randomlinks[207]="https://play.stan.com.au/programs/2369499/play" //ep 3
+			randomlinks[208]="https://play.stan.com.au/programs/2369500/play" //ep 4
+			randomlinks[209]="https://play.stan.com.au/programs/2369501/play" //ep 5
+			randomlinks[210]="https://play.stan.com.au/programs/2369502/play" //ep 6
+			randomlinks[211]="https://play.stan.com.au/programs/2369503/play" //ep 7
+			randomlinks[212]="https://play.stan.com.au/programs/2369504/play" //ep 8
+			randomlinks[213]="https://play.stan.com.au/programs/2369505/play" //ep 9
+			randomlinks[214]="https://play.stan.com.au/programs/2369506/play" //ep 10
+			randomlinks[215]="https://play.stan.com.au/programs/2369507/play" //ep 11
+			randomlinks[216]="https://play.stan.com.au/programs/2369508/play" //ep 12
+			randomlinks[217]="https://play.stan.com.au/programs/2369509/play" //ep 13
+			randomlinks[218]="https://play.stan.com.au/programs/2369510/play" //ep 14
+			randomlinks[219]="https://play.stan.com.au/programs/2369511/play" //ep 15
+			randomlinks[220]="https://play.stan.com.au/programs/2369512/play" //ep 16
+			randomlinks[221]="https://play.stan.com.au/programs/2369513/play" //ep 17
+			randomlinks[222]="https://play.stan.com.au/programs/2369514/play" //ep 18
+			randomlinks[223]="https://play.stan.com.au/programs/2369515/play" //ep 19
+			randomlinks[224]="https://play.stan.com.au/programs/2369516/play" //ep 20
+			randomlinks[225]="https://play.stan.com.au/programs/2369507/play" //ep 21
+			randomlinks[226]="https://play.stan.com.au/programs/2369508/play" //ep 22
+			randomlinks[227]="https://play.stan.com.au/programs/2369509/play" //ep 23
+			randomlinks[228]="https://play.stan.com.au/programs/2369510/play" //ep 24
+
+			//season 11 (25 episodes)
+			randomlinks[229]="https://play.stan.com.au/programs/2369511/play" //ep 1
+			randomlinks[230]="https://play.stan.com.au/programs/2369512/play" //ep 2
+			randomlinks[231]="https://play.stan.com.au/programs/2369513/play" //ep 3
+			randomlinks[232]="https://play.stan.com.au/programs/2369514/play" //ep 4
+			randomlinks[233]="https://play.stan.com.au/programs/2369515/play" //ep 5
+			randomlinks[234]="https://play.stan.com.au/programs/2369516/play" //ep 6
+			randomlinks[235]="https://play.stan.com.au/programs/2369517/play" //ep 7
+			randomlinks[236]="https://play.stan.com.au/programs/2369518/play" //ep 8
+			randomlinks[237]="https://play.stan.com.au/programs/2369519/play" //ep 9
+			randomlinks[238]="https://play.stan.com.au/programs/2369520/play" //ep 10
+			randomlinks[239]="https://play.stan.com.au/programs/2369521/play" //ep 11
+			randomlinks[240]="https://play.stan.com.au/programs/2369522/play" //ep 12
+			randomlinks[241]="https://play.stan.com.au/programs/2369523/play" //ep 13
+			randomlinks[242]="https://play.stan.com.au/programs/2369524/play" //ep 14
+			randomlinks[243]="https://play.stan.com.au/programs/2369525/play" //ep 15
+			randomlinks[244]="https://play.stan.com.au/programs/2369526/play" //ep 16
+			randomlinks[245]="https://play.stan.com.au/programs/2369527/play" //ep 17
+			randomlinks[246]="https://play.stan.com.au/programs/2369528/play" //ep 18
+			randomlinks[247]="https://play.stan.com.au/programs/2369529/play" //ep 19
+			randomlinks[248]="https://play.stan.com.au/programs/2369530/play" //ep 20
+
+			//season 12 (4 episodes)
+
+			//season 13 (24 episodes)
+
+			// randomisers number and opens link in that array reference
+			function randomlink(){
+			var win = window.open(randomlinks[Math.floor(Math.random()*randomlinks.length)], '_blank')
+			win.focus();
+			}
+		</script>
+
+
+		<style>
+			body 
+			{
+				background-image: url("https://www.whats-on-netflix.com/wp-content/uploads/2019/03/greys-anatomy-reportedly-leaving-netflix-2019.jpg");
+				background-color: #cccccc;
+				margin-left:100px;
+			}
+
+			.button 
+			{
+				background-color: white; 
+				color: black; 
+				font-family:Helvetica;
+				font-size: 20px;
+				height:80px;
+				border: 2px solid #008CBA;
+			}
+
+			.button:hover 
+			{
+				background-color: #008CBA;
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="content">
+			<img src="https://fontmeme.com/temporary/f5678103c10eb180ef814da49e58b282.png"/>
+			<br><br><br><br><br><br><Br><Br><br><br>
+			<form method="post">
+			<p><input type="button" class="button" name="B1" value="Click here to generate a random episode" onclick="randomlink()"></p> </form>
+		</div>
+	</body>
+</html>
