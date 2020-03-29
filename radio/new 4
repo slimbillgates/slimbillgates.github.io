@@ -1,0 +1,9 @@
+(defun farmer-takes-cabbage (state)
+ (cond ((equalp (farmer-side state) (cabbage-side state))
+ (safe
+ (make-state
+ (opposite (farmer-side state))
+ (wolf-side state)
+ (goat-side state)
+ (opposite (cabbage-side state)))))
+ (t nil)))
