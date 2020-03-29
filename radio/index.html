@@ -9,6 +9,6 @@
 <source src='https://streamingv2.shoutcast.com/sadclown' type='audio/mpeg' preload="auto" />
 </audio>
 <a id="audioControl" href="#" >
-<i class="fa fa-play-circle icon-size" aria-hidden="true" id="play" style="float:center;  color: black;"></i>
-<i class="fa fa-pause-circle icon-size" aria-hidden="true" id="pause" style="float:center;  color: black;"></i>
+<i class="fa fa-play-circle icon-size" aria-hidden="true" id="play" style="float:center;  color: #ff8000;"></i>
+<i class="fa fa-pause-circle icon-size" aria-hidden="true" id="pause" style="float:center;  color: #ff8000;"></i>
 </a><script>var StreamAudio = document.getElementById('StreamAudio'), ctrl = document.getElementById('audioControl'), playButton = document.getElementById('play'), pauseButton = document.getElementById('pause'); function toggleButton() { if (playButton.style.display === 'none') { playButton.style.display = 'block'; pauseButton.style.display = 'none'; } else { playButton.style.display = 'none'; pauseButton.style.display = 'block'; }} ctrl.onclick = function () { if (StreamAudio.paused) {StreamAudio.play();} else {StreamAudio.pause();}  toggleButton(); return false; }; </script>
