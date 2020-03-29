@@ -1,16 +1,69 @@
 
 
-<!-- BEGIN: SHOUTCASTWIDGETS.COM -- FREE HTML5 PLAYER SHOUTCAST ICECAST GENERATOR --><link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta http-equiv="CACHE-CONTROL" CONTENT="NO-CACHE"><style>#audioControl img {width: 100px; height: 100px;	text-align: left;} #pause {display: none;} a, a:hover, a:active, a:visited, a:focus {text-decoration:none;} #play{font-size:3.000em; } #pause{font-size:3.000em;} @media(max-width: 520px) {#play{font-size:12.000em; } #pause{font-size:12.000em;} .break {display:none;}} @media(min-width: 521px) {#play{font-size:6.000em;} #pause{font-size:6.000em;}}</style>
+<meta http-equiv="CACHE-CONTROL" CONTENT="NO-CACHE">
+<style>
+#audioControl img 
+{
+width: 100px; 
+height: 100px;
+text-align: left;
+}
+
+ #pause 
+ {
+ display: none;
+ }
+
+ a, a:hover, a:active, a:visited, a:focus 
+ {
+ text-decoration:none;
+ } 
+ 
+ #play
+ {
+ font-size:3.000em;
+ } 
+ #pause
+ {
+ font-size:3.000em;
+ } 
+ @media(max-width: 520px) 
+ {
+	#play
+	{
+		font-size:12.000em; 
+	} 
+	#pause
+	{
+	font-size:12.000em;
+	} 
+	.break 
+	{
+	display:none;
+	}
+} 
+	@media(min-width: 521px) 
+	{
+	#play
+	{
+	font-size:6.000em;
+	} 
+	#pause
+	{
+	font-size:6.000em;
+	}
+}
+</style>
 <div style="padding:20px;">  
 <audio  id="StreamAudio"  >
 <source src='https://streamingv2.shoutcast.com/sadclown' type='audio/mpeg' preload="auto" />
 </audio>
 <a id="audioControl" href="#" >
-<i class="fa fa-play-circle icon-size" aria-hidden="true" id="play" style="float:center;  color: #ff8000;"></i>
-<i class="fa fa-pause-circle icon-size" aria-hidden="true" id="pause" style="float:center;  color: #ff8000;"></i>
+<i class="fa fa-play-circle icon-size" aria-hidden="true" id="play" style="float:center;  color:black;"></i>
+<i class="fa fa-pause-circle icon-size" aria-hidden="true" id="pause" style="float:center;  color: black;"></i>
 </a><script>var StreamAudio = document.getElementById('StreamAudio'), ctrl = document.getElementById('audioControl'), playButton = document.getElementById('play'), pauseButton = document.getElementById('pause'); function toggleButton() { if (playButton.style.display === 'none') { playButton.style.display = 'block'; pauseButton.style.display = 'none'; } else { playButton.style.display = 'none'; pauseButton.style.display = 'block'; }} ctrl.onclick = function () { if (StreamAudio.paused) {StreamAudio.play();} else {StreamAudio.pause();}  toggleButton(); return false; }; </script>
-<!-- END: SHOUTCASTWIDGETS.COM -- FREE HTML5 PLAYER SHOUTCAST ICECAST GENERATOR -->
