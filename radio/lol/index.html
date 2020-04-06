@@ -41,10 +41,11 @@ Released   : 20130902
 <source src='https://streamingv2.shoutcast.com/sadclown' type='audio/mpeg' preload="auto" />
 </audio>
 <a id="audioControl" href="#" >
-<i class="fa fa-play-circle icon-size" aria-hidden="true" id="play" style="float:center;  color:#E54732;">CLICK HERE TO PLAY</i>
-<i class="fa fa-pause-circle icon-size" aria-hidden="true" id="pause" style="float:center;  color: #E54732;">CLICK HERE TO PLAY</i>
-
-</a><script>var StreamAudio = document.getElementById('StreamAudio'), ctrl = document.getElementById('audioControl'), playButton = document.getElementById('play'), pauseButton = document.getElementById('pause'); function toggleButton() { if (playButton.style.display === 'none') { playButton.style.display = 'block'; pauseButton.style.display = 'none'; } else { playButton.style.display = 'none'; pauseButton.style.display = 'block'; }} ctrl.onclick = function () { if (StreamAudio.paused) {StreamAudio.play();} else {StreamAudio.pause();}  toggleButton(); return false; }; </script>
+<i class="fa fa-play-circle icon-size" aria-hidden="true" id="play" style="float:center;  color:#E54732;">PAUSED</i>
+<i class="fa fa-pause-circle icon-size" aria-hidden="true" id="pause" style="float:center;  color: #E54732;">PLAYING</i>
+</a>
+Are we streaming?
+<script>var StreamAudio = document.getElementById('StreamAudio'), ctrl = document.getElementById('audioControl'), playButton = document.getElementById('play'), pauseButton = document.getElementById('pause'); function toggleButton() { if (playButton.style.display === 'none') { playButton.style.display = 'block'; pauseButton.style.display = 'none'; } else { playButton.style.display = 'none'; pauseButton.style.display = 'block'; }} ctrl.onclick = function () { if (StreamAudio.paused) {StreamAudio.play();} else {StreamAudio.pause();}  toggleButton(); return false; }; </script>
 	
 
 	</div>
@@ -97,7 +98,7 @@ Released   : 20130902
 			<h2>About</h2>
 			Sad clown quarantine radio was born ....</div>
 		<div id="fbox3">
-			<h2>Contact</h2>
+			<h2>SOCIALS</h2>
 			<p></p>
 			<ul class="style2">
 				<li><a href="#"><img src="images/social03.png" width="32" height="32" alt="" /></a></li>
