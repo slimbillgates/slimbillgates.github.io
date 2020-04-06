@@ -404,7 +404,7 @@ ul.style4 .first
 
 #page {
 	overflow: hidden;
-	height: 20px;
+	height: 40px;
 	padding-top: 4em;
 	padding-left: 50px;
 
@@ -595,22 +595,22 @@ text-align: left;
  
  #play
  {
- font-size:5.000em;
+ font-size:3.000em;
  } 
  #pause
  {
- font-size:5.000em;
+ font-size:3.000em;
  } 
  @media(max-width: 800px) 
  {
 	#play
 	{
-		font-size:5.000em; 
+		font-size:3.000em; 
 		
 	} 
 	#pause
 	{
-	font-size:5.000em;
+	font-size:3.000em;
 	} 
 	.break 
 	{
@@ -621,10 +621,10 @@ text-align: left;
 	{
 	#play
 	{
-	font-size:5.000em;
+	font-size:3.000em;
 	} 
 	#pause
 	{
-	font-size:5.000em;
+	font-size:3.000em;
 	}
 }
