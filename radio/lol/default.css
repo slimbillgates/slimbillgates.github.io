@@ -601,22 +601,22 @@ text-align: left;
  
  #play
  {
- font-size:10.000em;
+ font-size:5.000em;
  } 
  #pause
  {
- font-size:10.000em;
+ font-size:5.000em;
  } 
  @media(max-width: 800px) 
  {
 	#play
 	{
-		font-size:10.000em; 
+		font-size:5.000em; 
 		
 	} 
 	#pause
 	{
-	font-size:10.000em;
+	font-size:5.000em;
 	} 
 	.break 
 	{
@@ -627,10 +627,10 @@ text-align: left;
 	{
 	#play
 	{
-	font-size:10.000em;
+	font-size:5.000em;
 	} 
 	#pause
 	{
-	font-size:10.000em;
+	font-size:5.000em;
 	}
 }
