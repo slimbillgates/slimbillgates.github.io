@@ -20,7 +20,6 @@
   </style>
   <link rel="preload" href="fxband_rough-webfont.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fxband_rough-webfont.woff" as="font" type="font/woff" crossorigin>
- 
 </head>
 <body>
 <div id="load"></div>
@@ -31,36 +30,39 @@
   <input type="text" style="width: 400px; height: 30px; margin-left: auto; margin-right: auto;" value="You Wouldn't Steal a Car" id="bottom-text" autofocus="autofocus" />
 </div>
 <script>
-  var canvas = document.getElementById('piracygeneratorcanvas');
-  ctx = canvas.getContext('2d');
-  width = 1000;
-  height = 490;
-  canvas.width = width;
-  canvas.height = height;
-  var img = document.getElementById('start-image');
-  var bottomText = document.getElementById('bottom-text');
-  generateImage();
-  bottomText.addEventListener('keydown', generateImage);
-  bottomText.addEventListener('keyup', generateImage);
-  bottomText.addEventListener('change', generateImage);
-  function generateImage() {
-    ctx.clearRect(0, 0, width, height);
-    ctx.drawImage(img, 0, 0, width, height);
-    ctx.lineWidth = 4;
-    ctx.font = '40pt xband_roughregular';
-    ctx.strokeStyle = 'black';
-    ctx.fillStyle = 'white';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'top';
-    ctx.textBaseline = 'middle';
-    var text2 = document.getElementById('bottom-text').value;
-    text = text2.toUpperCase();
-    x = canvas.width / 2;
-    y = canvas.height - canvas.height / 2;
-    ctx.strokeText(text, x, y);
-    ctx.fillText(text, x, y);
-  }
+  window.onload = function() {
+    var canvas = document.getElementById('piracygeneratorcanvas');
+    ctx = canvas.getContext('2d');
+    width = 1000;
+    height = 490;
+    canvas.width = width;
+    canvas.height = height;
+    var img = document.getElementById('start-image');
+    var bottomText = document.getElementById('bottom-text');
+    generateImage();
+    bottomText.addEventListener('keydown', generateImage);
+    bottomText.addEventListener('keyup', generateImage);
+    bottomText.addEventListener('change', generateImage);
+    function generateImage() {
+      ctx.clearRect(0, 0, width, height);
+      ctx.drawImage(img, 0, 0, width, height);
+      ctx.lineWidth = 4;
+      ctx.font = '40pt xband_roughregular';
+      ctx.strokeStyle = 'black';
+      ctx.fillStyle = 'white';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'top';
+      ctx.textBaseline = 'middle';
+      var text2 = document.getElementById('bottom-text').value;
+      text = text2.toUpperCase();
+      x = canvas.width / 2;
+      y = canvas.height - canvas.height / 2;
+      ctx.strokeText(text, x, y);
+      ctx.fillText(text, x, y);
+    }
+  };
 </script>
 </body>
 </html>
+
 
